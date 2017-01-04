@@ -35,7 +35,11 @@
 # Ninja tmp ignore
 *.ninja_deps
 *.ninja_log
- 
+
+# VS files 
+*.db
+*.pdb 
+
 # dirs
 /cocos2d/**
 /Debug/win32/**
