@@ -38,6 +38,7 @@
  
 # dirs
 /cocos2d/**
+/Debug/win32/**
 
 # CMake files
 CMakeCache.txt
