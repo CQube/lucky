@@ -39,10 +39,12 @@
 # VS files 
 *.db
 *.pdb 
+*.opendb
 
 # dirs
 /cocos2d/**
-/Debug/win32/**
+/proj.win32/Debug.win32/**
+/proj.win32/.vs/**
 
 # CMake files
 CMakeCache.txt
