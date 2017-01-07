@@ -24,7 +24,7 @@
     <ClCompile Include="..\Classes\AudioManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SettnigsScene.cpp">
+    <ClCompile Include="..\Classes\SettingsScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="..\Classes\AudioManager.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\SettnigsScene.h">
+    <ClInclude Include="..\Classes\SettingsScene.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

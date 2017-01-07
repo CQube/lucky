@@ -1,8 +1,9 @@
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 #include "cocos2d.h"
-#include "SettnigsScene.h"
-#include "AudioManager.h"
+#include "SettingsScene.h"
+#include <AudioManager.h>
+using namespace cocos2d::experimental;
 
 USING_NS_CC;
 #define MAIN_MENU_LABEL_FONT "fonts/Enchanted Land cyr-lat.ttf"

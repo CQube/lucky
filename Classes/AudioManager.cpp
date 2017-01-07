@@ -1,30 +1,40 @@
 #include "AudioManager.h"
+int AudioManager::backgound_audioID;
+bool AudioManager::_playing;
 
 void AudioManager::playBackgroundAudio() {
-	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BACKGROUND_SOUND, true);
+	backgound_audioID = AudioEngine::play2d(BACKGROUND_SOUND, true, 1.0f);
+	_playing = true;
 }
 
 void AudioManager::stopBackgroundAudio(){
-	CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+	AudioEngine::stop(backgound_audioID);
+	_playing = false;
 }
 
 void AudioManager::pauseBackgroundAudio(){
-	CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+	AudioEngine::pause(backgound_audioID);
+	_playing = false;
 }
 
 void AudioManager::resumeBackgroundAudio(){
-	CocosDenshion::SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+	AudioEngine::resume(backgound_audioID);
+	_playing = true;
 }
 
 void AudioManager::setBackgroundAudioVolume(float value){
-	CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(value);
+	AudioEngine::setVolume(backgound_audioID, value);
+}
+
+float AudioManager::getBackgroundAudioVolume() {
+	return AudioEngine::getVolume(backgound_audioID);
 }
 
 void AudioManager::endAudio() {
-	CocosDenshion::SimpleAudioEngine::getInstance()->end();
+	_playing = false;
+	AudioEngine::end();
 }
 
 bool AudioManager::isBackgroundMusicPlaying() {
-	bool playing = CocosDenshion::SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying();
-	return playing;
+	return _playing;
 }

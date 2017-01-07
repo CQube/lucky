@@ -22,6 +22,8 @@ bool MainMenuScene::init()
 	auto menu = Menu::createWithArray(MenuItems);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+
+	return true;
 }
 //====================================Buttons
 void MainMenuScene::createButtons()
@@ -68,7 +70,9 @@ void MainMenuScene::createBackground()
 
 void MainMenuScene::menuCloseCallback(Ref* pSender)
 {
+	AudioManager::endAudio();
 	Director::getInstance()->end();
+	
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 	exit(0);
 #endif   
@@ -81,7 +85,7 @@ void MainMenuScene::playGameCallback(Ref* pSender)
 
 void MainMenuScene::optionsSceneCallback(Ref* pSender)
 {
-	auto scene = SettnigsScene::createScene();
+	auto scene = SettingsScene::createScene();
 	Director::getInstance()->replaceScene(scene);
 }
 
