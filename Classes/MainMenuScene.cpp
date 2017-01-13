@@ -29,7 +29,7 @@ bool MainMenuScene::init()
 void MainMenuScene::createButtons()
 {
 	createPlayButton();
-	createOptionsButton();
+	createSettingsButton();
 	createExitButton();
 }
 
@@ -42,10 +42,10 @@ void MainMenuScene::createPlayButton() {
 	MenuItems.pushBack(playButton);
 }
 
-void MainMenuScene::createOptionsButton() {
-	auto button = Label::createWithTTF("Options", MAIN_MENU_LABEL_FONT, MAIN_MENU_LABEL_SIZE);
+void MainMenuScene::createSettingsButton() {
+	auto button = Label::createWithTTF("Settings", MAIN_MENU_LABEL_FONT, MAIN_MENU_LABEL_SIZE);
 	button->setTextColor(ccc4(215, 255, 0, 255));
-	optionsButton = MenuItemLabel::create(button, CC_CALLBACK_1(MainMenuScene::optionsSceneCallback, this));
+	optionsButton = MenuItemLabel::create(button, CC_CALLBACK_1(MainMenuScene::settingsSceneCallback, this));
 	optionsButton->setPosition(playButton->getPosition() + Vec2(0, -playButton->getContentSize().height * 1.5));
 	MenuItems.pushBack(optionsButton);
 }
@@ -83,7 +83,7 @@ void MainMenuScene::playGameCallback(Ref* pSender)
 
 }
 
-void MainMenuScene::optionsSceneCallback(Ref* pSender)
+void MainMenuScene::settingsSceneCallback(Ref* pSender)
 {
 	auto scene = SettingsScene::createScene();
 	Director::getInstance()->replaceScene(scene);

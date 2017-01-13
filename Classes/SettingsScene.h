@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include "MainMenuScene.h"
 #include <ui/CocosGUI.h>
+#include "SettingsConfRW.h"
 USING_NS_CC;
 using namespace ui;
 

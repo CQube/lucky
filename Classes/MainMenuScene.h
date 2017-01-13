@@ -3,7 +3,6 @@
 #include "cocos2d.h"
 #include "SettingsScene.h"
 #include <AudioManager.h>
-using namespace cocos2d::experimental;
 
 USING_NS_CC;
 #define MAIN_MENU_LABEL_FONT "fonts/Enchanted Land cyr-lat.ttf"
@@ -28,13 +27,13 @@ public:
 	static MainMenuScene* create();
 	//===============================================Buttons+Sound+Sprites
 	void createPlayButton();
-	void createOptionsButton();
+	void createSettingsButton();
 	void createExitButton();
 	void createButtons();
 	void createBackground();
 	//================================================Callbacks
 	void playGameCallback(Ref* pSender);
-	void optionsSceneCallback(Ref* pSender);
+	void settingsSceneCallback(Ref* pSender);
     void menuCloseCallback(cocos2d::Ref* pSender);
 };
 

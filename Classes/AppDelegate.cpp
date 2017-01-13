@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "MainMenuScene.h"
+#include "LoadingFrame.h"
+//#include "MainMenuScene.h"
 
 USING_NS_CC;
 static cocos2d::Size designResolutionSize = cocos2d::Size(1920, 1080);
@@ -69,10 +70,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = MainMenuScene::createScene();
+    auto scene = LoadingFrame::createScene();
     // run
     director->runWithScene(scene);
-
+	
     return true;
 }
 

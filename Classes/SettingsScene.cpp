@@ -82,15 +82,13 @@ void SettingsScene::createMusicVolumeSlider() {
 	slider->loadBarTexture("slider/slider-track.png");
 	slider->loadSlidBallTextures("slider/slider-cap.png", "slider/slider-cap.png", "");
 	slider->loadProgressBarTexture("slider/slider-track-fill.png");
-	if(slider->isEnabled())
-		slider->setPercent(AudioManager::getBackgroundAudioVolume() * 100);
+	slider->setPercent(AudioManager::getBackgroundAudioVolume() * 100);
 	slider->setPosition(sliderLabel->getPosition() + Vec2(sliderLabel->getContentSize().width + 20, 0));
 	slider->addEventListener([&](Ref* sender, Slider::EventType type) {
 		if (type == Slider::EventType::ON_PERCENTAGE_CHANGED) {
 			AudioManager::setBackgroundAudioVolume((float)slider->getPercent() / 100);
 		}
 	});
-	
 	this->addChild(slider);
 }
 
@@ -104,7 +102,6 @@ void SettingsScene::setSliderState()
 	{
 		slider->setEnabled(false);
 	}
-	
 }
 
 //======================================Callbacks
@@ -119,6 +116,9 @@ void SettingsScene::selectedEvent(Ref* pSender)
 
 void SettingsScene::mainMenuCallback(Ref* pSender)
 {
+	SettingsConfRW::writeBGMusicPlaying(AudioManager::isBackgroundMusicPlaying());
+	SettingsConfRW::writeBGMusicVolume(AudioManager::getBackgroundAudioVolume());
+	//======================================
 	auto scene = MainMenuScene::createScene();
 	Director::getInstance()->replaceScene(scene);
 }

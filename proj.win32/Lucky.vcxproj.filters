@@ -10,44 +10,73 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{2c6ffc2d-75bf-4957-a440-9937ddc6b84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scenes">
+      <UniqueIdentifier>{8cef4c46-aead-4681-a1ca-11e7c55a64f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Global">
+      <UniqueIdentifier>{1cf4a9cf-0831-490d-a380-d5fb0db22b2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Classes\LoadingFrame.cpp">
+      <Filter>src\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\MainMenuScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AudioManager.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\SettingsScene.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AudioManager.cpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SettingsConfRW.cpp">
+      <Filter>src\Global</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\core\config.h">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LoadingFrame.h">
+      <Filter>src\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MainMenuScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AudioManager.h">
-      <Filter>src</Filter>
+      <Filter>src\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\SettingsScene.h">
-      <Filter>src</Filter>
+      <Filter>src\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AudioManager.h">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SettingsConfRW.h">
+      <Filter>src\Global</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\config\settings.conf">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
 </Project>
