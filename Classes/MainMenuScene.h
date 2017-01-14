@@ -2,7 +2,9 @@
 #define __HELLOWORLD_SCENE_H__
 #include "cocos2d.h"
 #include "SettingsScene.h"
+#include "GameMap.hpp"
 #include <AudioManager.h>
+
 using namespace cocos2d::experimental;
 
 USING_NS_CC;
