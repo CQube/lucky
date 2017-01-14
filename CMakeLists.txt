@@ -123,15 +123,21 @@ if ( WIN32 )
 endif( WIN32 )
 
 set(GAME_SRC
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
-  ${PLATFORM_SPECIFIC_SRC}
+	Classes/AppDelegate.cpp
+	Classes/AudioManager.cpp
+	Classes/GameMap.cpp
+	Classes/MainMenuScene.cpp
+	Classes/SettingsScene.cpp
+	${PLATFORM_SPECIFIC_SRC}	
 )
 
 set(GAME_HEADERS
-  Classes/AppDelegate.h
-  Classes/HelloWorldScene.h
-  ${PLATFORM_SPECIFIC_HEADERS}
+	Classes/AppDelegate.h
+	Classes/AudioManager.h
+	Classes/GameMap.hpp
+	Classes/MainMenuScene.h
+	Classes/SettingsScene.h
+	${PLATFORM_SPECIFIC_HEADERS}
 )
 
 if( ANDROID )
