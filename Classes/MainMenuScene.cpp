@@ -80,8 +80,7 @@ void MainMenuScene::menuCloseCallback(Ref* pSender)
 
 void MainMenuScene::playGameCallback(Ref* pSender)
 {
-	auto scene = GameMap::createScene();
-	Director::getInstance()->replaceScene(scene);
+
 }
 
 void MainMenuScene::optionsSceneCallback(Ref* pSender)
@@ -103,9 +102,7 @@ MainMenuScene* MainMenuScene::create()
 		else
 			delete pRet;
 	}
-/*	else //
-	(child == NULL)
-	(test)
+/*	else //попыстка создания костыля во избежание вылетов(child == NULL) при переходе на сцену (test)
 	{
 		delete pRet;
 		pRet = NULL;
